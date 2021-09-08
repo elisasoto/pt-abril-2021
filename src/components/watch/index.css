@@ -1,0 +1,30 @@
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-type-crono {
+    background-color: rgb(138, 186, 133);
+    padding: 16px 16px;
+    border: 1px solid  rgb(138, 186, 133);
+}
+
+.button-type-crono:hover {
+    background-color:  rgb(138, 186, 133);
+    color: white
+}
+
+.clock-display {
+    padding: 8px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.crono-alert {
+    padding: 8px;
+    color: red;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

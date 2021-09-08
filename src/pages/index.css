@@ -1,0 +1,24 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px;
+    margin: 16px; 
+    flex-direction: column;
+}
+
+.loading-message {
+    font-family: sans-serif;
+    font-size: 32px;
+    color: blue
+}
+
+
+.disable-crono {
+    display: none; 
+}
+
+.disable-clock {
+    display: none;
+}

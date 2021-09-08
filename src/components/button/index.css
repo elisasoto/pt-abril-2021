@@ -1,0 +1,50 @@
+.button {
+border: none;
+border-radius: 20px;
+  color: black;
+  text-align: center;
+  font-family: sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+}
+
+.button-action-start, .button-action-pause {
+    background-color: white;
+    padding: 8px 16px;
+    border: 1px solid green 
+}
+
+.button-action-start:hover, .button-action-pause:hover {
+    background-color: #4CAF50; 
+    color: white
+}
+
+.button-action-stop, .button-action-clear {
+    background-color: white;
+    padding: 8px 16px;
+    border: 1px solid red 
+}
+
+.button-action-stop:hover, .button-action-clear:hover {
+    background-color: red; 
+    color: white
+}
+
+.button-action-split {
+    background-color: white;
+    padding: 8px 16px;
+    border: 1px solid blue 
+}
+
+.button-action-split:hover {
+    background-color: blue; 
+    color: white
+}
+
+
+
