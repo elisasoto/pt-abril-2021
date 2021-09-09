@@ -56,7 +56,8 @@ export default function Home({ enableCrono }) {
   };
 
   const handleClickSplit = () => {
-    setPrintTime((prevtime) => [...prevtime, cronoTime]);
+    setPrintTime((prevtime) => [...prevtime, { ...cronoTime }]);
+    // Recuerda! [...prevTime] nos asegura que lo que habia antes en el array no se borra con la nueva actualizacion. {...cronoTime} guarda una copia del objeto. Si ponemos solo el cronoTime este es el mismo objeto que se va acutalizando constantemente.
   };
 
   return (
