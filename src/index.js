@@ -1,10 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Base from "pages";
+import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
+
+// Header
+// Route
+// routes
 
 ReactDOM.render(
   <React.StrictMode>
-    <Base />
+    <Router>
+      {/*Header*/}
+      <Switch>
+        {routes.map("Route")}
+        <Redirect to="/"/>
+      </Switch>
+      {/*Footer*/}
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
