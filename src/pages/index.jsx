@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Button from "components/button";
+import CronoPage from "pages/crono";
+import ClockPage from "pages/clock";
 import Crono from "components/crono";
-import Clock from "components/watch";
 
 import "./index.css";
 
@@ -101,6 +102,7 @@ export default function Base() {
         <Button text={buttonText.watch} handleClick={handleClickClock} />
         <Button text={buttonText.crono} handleClick={handleClickCrono} />
       </section>
+      <CronoPage />
       <section className={`${enableCrono}-crono`}>
         <Crono
           text={buttonText}
@@ -114,13 +116,7 @@ export default function Base() {
           status={status}
         />
       </section>
-      <section className={`${enableClock}-crono`}>
-        {clock ? (
-          <Clock clock={clock} status={status} />
-        ) : (
-          <p className="loading-message">Loading...</p>
-        )}
-      </section>
+      <ClockPage enableClock={enableClock} clock={clock} status={status} />
     </section>
   );
 }

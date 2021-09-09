@@ -1,21 +1,21 @@
-import Home from "pages/home";
-import Clock from "pages/clock";
-import Crono from "pages/crono";
+import HomePage from "pages";
+import ClockPage from "pages/clock";
+import CronoPage from "pages/crono";
 
 export default [
   {
     path: "/",
-    component: Home,
+    component: HomePage,
     exact: true,
   },
   {
     path: "/clock",
-    component: Clock,
+    component: ClockPage,
     exact: true,
   },
   {
     path: "/crono",
-    component: Crono,
+    component: CronoPage,
     exact: true,
   },
 ];
