@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "components/button";
 import CronoPage from "pages/crono";
 import ClockPage from "pages/clock";
@@ -20,7 +20,7 @@ export default function Base() {
   const [cronoTime, setCronoTime] = useState({ h: 0, m: 0, s: 0, ms: 0 });
   const [printTime, setPrintTime] = useState([]);
   const [interv, setInterv] = useState();
-  const [clock, setClock] = useState();
+
   const [enableClock, setEnableClock] = useState("disable");
   const [enableCrono, setEnableCrono] = useState("disable");
   const [status, setStatus] = useState(0);
@@ -50,17 +50,6 @@ export default function Base() {
       h: cronoTime.h,
     });
   };
-
-  useEffect(() => {
-    setInterval(() => {
-      const date = new Date();
-      setClock({
-        h: date.getHours(),
-        m: date.getMinutes(),
-        s: date.getSeconds(),
-      });
-    }, 1000);
-  }, []);
 
   const handleClickStart = () => {
     start();
@@ -102,21 +91,20 @@ export default function Base() {
         <Button text={buttonText.watch} handleClick={handleClickClock} />
         <Button text={buttonText.crono} handleClick={handleClickCrono} />
       </section>
-      <CronoPage />
-      <section className={`${enableCrono}-crono`}>
-        <Crono
-          text={buttonText}
-          handleClickStart={handleClickStart}
-          handleClickStop={handleClickStop}
-          handleClickSplit={handleClickSplit}
-          handleClickClear={handleClickClear}
-          handleClickPause={handleClickPause}
-          crono={cronoTime}
-          printTime={printTime}
-          status={status}
-        />
-      </section>
-      <ClockPage enableClock={enableClock} clock={clock} status={status} />
+      <CronoPage
+        text={buttonText}
+        handleClickStart={handleClickStart}
+        handleClickStop={handleClickStop}
+        handleClickSplit={handleClickSplit}
+        handleClickClear={handleClickClear}
+        handleClickPause={handleClickPause}
+        crono={cronoTime}
+        printTime={printTime}
+        status={status}
+        enableCrono={enableCrono}
+      />
+
+      <ClockPage enableClock={enableClock} status={status} />
     </section>
   );
 }
