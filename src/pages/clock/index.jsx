@@ -13,7 +13,7 @@ export default function ClockPage({ enableClock, status }) {
         s: date.getSeconds(),
       });
     }, 1000);
-    return () => clearInterval(interval); // OJO! si no limpieamos el intevalo, causa un error de "unmounted component can cause memory leaks"
+    return () => clearInterval(interval); // OJO! si no limpiamos el intevalo, causa un error de "unmounted component can cause memory leaks"
   }, []);
 
   return (

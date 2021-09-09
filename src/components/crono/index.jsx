@@ -2,8 +2,16 @@ import Button from "components/button";
 import TimeList from "components/timelist";
 import "./index.css";
 
+const actionButtons = {
+  start: "start",
+  stop: "stop",
+  split: "split",
+
+  pause: "pause",
+  clear: "clear",
+};
+
 export default function Crono({
-  text,
   handleClickStart,
   handleClickPause,
   handleClickStop,
@@ -23,25 +31,25 @@ export default function Crono({
       </section>
       {status === 0 || status === 2 ? (
         <section className={"control-buttons"}>
-          <Button text={text.split} handleClick={handleClickSplit} />
-          <Button text={text.start} handleClick={handleClickStart} />
-          <Button text={text.stop} handleClick={handleClickStop} />
+          <Button text={actionButtons.split} handleClick={handleClickSplit} />
+          <Button text={actionButtons.start} handleClick={handleClickStart} />
+          <Button text={actionButtons.stop} handleClick={handleClickStop} />
         </section>
       ) : (
         ""
       )}
       {status === 1 ? (
         <section className={"control-buttons"}>
-          <Button text={text.split} handleClick={handleClickSplit} />
-          <Button text={text.pause} handleClick={handleClickPause} />
-          <Button text={text.stop} handleClick={handleClickStop} />
+          <Button text={actionButtons.split} handleClick={handleClickSplit} />
+          <Button text={actionButtons.pause} handleClick={handleClickPause} />
+          <Button text={actionButtons.stop} handleClick={handleClickStop} />
         </section>
       ) : (
         ""
       )}
       {status === 3 ? (
         <section className={"control-buttons"}>
-          <Button text={text.clear} handleClick={handleClickClear} />
+          <Button text={actionButtons.clear} handleClick={handleClickClear} />
         </section>
       ) : (
         ""
