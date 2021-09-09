@@ -5,8 +5,6 @@ import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 import Header from "components/header";
 import Route from "components/route";
 import routes from "router";
-// Route
-// routes
 
 ReactDOM.render(
   <React.StrictMode>
