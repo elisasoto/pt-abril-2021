@@ -21,7 +21,7 @@ export default function Home({ enableCrono }) {
       cronoTime.m++;
       cronoTime.s = 0;
     }
-    if (cronoTime.ms === 1000) {
+    if (cronoTime.ms === 100) {
       cronoTime.s++;
       cronoTime.ms = 0;
     }
