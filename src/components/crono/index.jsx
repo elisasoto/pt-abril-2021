@@ -21,7 +21,6 @@ export default function Crono({
   crono,
   text,
 }) {
-  console.log(text);
   return (
     <section className="crono-container">
       <section className="crono-display">
