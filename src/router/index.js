@@ -1,6 +1,6 @@
 import HomePage from "pages";
-import ClockPage from "pages/clock";
-import CronoPage from "pages/crono";
+import ClockPage from "pages/clockPage";
+import CronoPage from "pages/cronoPage";
 
 export default [
   {

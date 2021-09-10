@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Crono from "components/crono";
 
-export default function Home({ enableCrono }) {
+export default function CronoPage({ enableCrono }) {
   const [cronoTime, setCronoTime] = useState({ h: 0, m: 0, s: 0, ms: 0 });
   const [printTime, setPrintTime] = useState([]);
   const [interv, setInterv] = useState();

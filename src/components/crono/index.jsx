@@ -6,7 +6,6 @@ const actionButtons = {
   start: "start",
   stop: "stop",
   split: "split",
-
   pause: "pause",
   clear: "clear",
 };
@@ -20,7 +19,9 @@ export default function Crono({
   printTime,
   status,
   crono,
+  text,
 }) {
+  console.log(text);
   return (
     <section className="crono-container">
       <section className="crono-display">

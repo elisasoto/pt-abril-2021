@@ -1,14 +1,21 @@
 import { useState } from "react";
 import Button from "components/button";
-import CronoPage from "pages/crono";
-import ClockPage from "pages/clock";
+import CronoPage from "pages/cronoPage";
+import ClockPage from "pages/clockPage";
 
 import "./index.css";
 
 const buttonText = {
   crono: "crono",
   watch: "clock",
+  start: "start",
+  stop: "stop",
+  split: "split",
+  pause: "pause",
+  clear: "clear",
 };
+
+console.log(buttonText);
 
 export default function Base() {
   const [enableClock, setEnableClock] = useState("disable");
@@ -29,7 +36,7 @@ export default function Base() {
         <Button text={buttonText.watch} handleClick={handleClickClock} />
         <Button text={buttonText.crono} handleClick={handleClickCrono} />
       </section>
-      <CronoPage enableCrono={enableCrono} />
+      <CronoPage enableCrono={enableCrono} text={buttonText} />
       <ClockPage enableClock={enableClock} />
     </section>
   );

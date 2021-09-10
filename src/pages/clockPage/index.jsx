@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Clock from "components/watch";
+import Clock from "components/clock";
 
 export default function ClockPage({ enableClock, status }) {
   const [clock, setClock] = useState();
